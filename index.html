@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Don't Press This ☠️</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #07111b, #17364a);
+      color: white;
+    }
+
+    h1 {
+      font-size: 50px;
+    }
+
+    button {
+      padding: 18px 30px;
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      background: #9b111e;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    #surprise {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.95);
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    #pirate {
+      font-size: 150px;
+    }
+
+    #message {
+      font-size: 45px;
+      color: #ffd45c;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div>
+    <div style="font-size:70px;">🏴‍☠️</div>
+    <h1>DON'T PRESS THIS</h1>
+    <p>Seriously... don't 👀</p>
+
+    <button onclick="showSurprise()">
+      ☠️ PRESS AT YOUR OWN RISK ☠️
+    </button>
+  </div>
+
+  <div id="surprise">
+    <div id="pirate">🏴‍☠️</div>
+
+    <div id="message">
+      OH OH… LOOK WHO IT IS 👀
+    </div>
+
+    <p style="font-size:25px;">ARRR! 😂</p>
+
+    <button onclick="closeSurprise()">Go Back</button>
+  </div>
+
+  <script>
+    function showSurprise() {
+      document.getElementById("surprise").style.display = "flex";
+    }
+
+    function closeSurprise() {
+      document.getElementById("surprise").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
